@@ -1,5 +1,15 @@
 # pygeofilter-duckdb
 
+This repo is an evolution of [https://github.com/DLR-terrabyte/pygeofilter-duckdb](https://github.com/DLR-terrabyte/pygeofilter-duckdb).
+
+We have changed the orginal implementation to:
+- make it a standalone library
+- updated it to support duckdb newer releases (no support for 1.2.0 yet) 
+- added more examples to cover the process STAC Items -> geoparquet -> Duckdb
+- use hatch
+
+## Introduction
+
 This is an extension for [pygeofilter](https://github.com/geopython/pygeofilter) to support SQL queries in DuckDB based on Geoparquet files. 
 
 pygeofilter allows to parse several filter encoding standards (e.g., CQL JSON, CQL Text) and to convert them to queries for several backends (e.g., SQL, Django, Pandas). 
@@ -7,8 +17,11 @@ pygeofilter allows to parse several filter encoding standards (e.g., CQL JSON, C
 In DuckDB the geometry is currently stored as BLOB, which needs to be considered in the filter conversion. This extension is based on the following issue: https://github.com/geopython/pygeofilter/issues/90. 
 
 ## Example
-An example Jupyter Notebook is available in the `example` folder and can be viewed here: 
-https://nbviewer.org/github/DLR-terrabyte/pygeofilter-duckdb/blob/main/example/Query-STAC-Geoparquet.ipynb
+
+Run the notebooks in the folder example:
+
+* `hatch shell`
+* `pip install folium ipykernel`
 
 ## Usage
 
