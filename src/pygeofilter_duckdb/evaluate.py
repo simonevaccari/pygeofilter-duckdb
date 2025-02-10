@@ -6,6 +6,7 @@ from pygeofilter import ast, values
 from pygeofilter.backends.evaluator import handle
 from pygeofilter.backends.sql.evaluate import SQLEvaluator
 
+
 class DuckDBEvaluator(SQLEvaluator):
     @handle(values.Geometry)
     def geometry(self, node: values.Geometry):
